@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_note_input"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="32dp"
+    android:background="@drawable/rounded_corner_view"
+    android:drawableStart="@drawable/search_icon"
+    android:drawablePadding="12dp"
+    android:ems="10"
+    android:inputType="text"
+    android:padding="12dp"
+    android:tag="second_color"
+    android:textColor="#DEAD8B"
+    android:textColorHint="#DEAD8B"/>

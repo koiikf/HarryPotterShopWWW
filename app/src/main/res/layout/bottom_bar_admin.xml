@@ -1,0 +1,102 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="#151515"
+        android:weightSum="3"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/update_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/update_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:tag="first_color"
+                app:srcCompat="@drawable/update_icon" />
+
+            <TextView
+                android:id="@+id/update_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                android:paddingTop="4dp"
+                android:tag="first_color"
+                android:text="Обновление"
+                android:textColor="#DEAD8B" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/add_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/add_icon" />
+
+            <TextView
+                android:id="@+id/add_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                android:paddingTop="4dp"
+                android:tag="first_color"
+                android:text="Добавить"
+                android:textColor="#DEAD8B" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/delete_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:tag="first_color"
+                app:srcCompat="@drawable/icon_delete" />
+
+            <TextView
+                android:id="@+id/delete_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                android:paddingTop="4dp"
+                android:tag="first_color"
+                android:text="Удаление"
+                android:textColor="#DEAD8B" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

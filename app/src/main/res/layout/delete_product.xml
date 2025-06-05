@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#151515"
+    tools:context=".activity.MainActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <ScrollView
+        android:id="@+id/information"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/information_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#151515"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/delete_product_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                android:padding="32dp"
+                android:text="Удаление продукта"
+                android:textColor="#DEAD8B"
+                android:textSize="34sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/select_product_string"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                    android:tag="second_color"
+                    android:text="Выберите продукт"
+                    android:textColor="#DEAD8B"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/select_product_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:autofillHints=""
+                    android:background="@drawable/rounded_corner_view"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="#DEAD8B"
+                    android:ems="10"
+                    android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                    android:hint="Продукт"
+                    android:padding="12dp"
+                    android:tag="first_color"
+                    android:textColor="#DEAD8B"
+                    android:textColorHint="#DEAD8B"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/delete_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded_corner_view_button_fill"
+                android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:tag="second_color"
+                android:text="Удалить"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#DEAD8B"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bottom_bar_admin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

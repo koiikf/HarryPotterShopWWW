@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F8"
+    tools:context=".activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00513D3D"
+        android:tag="first_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:id="@+id/registration_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp"
+            android:background="#151515"
+            android:orientation="vertical"
+            android:paddingLeft="32dp"
+            android:paddingTop="32dp"
+            android:paddingRight="32dp">
+
+            <TextView
+                android:id="@+id/app_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                android:gravity="center"
+                android:tag="second_color"
+                android:text="@string/app_title"
+                android:textAlignment="center"
+                android:textColor="#DEAD8B"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/registration_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                android:tag="second_color"
+                android:text="Регистрация"
+                android:textAlignment="viewStart"
+                android:textColor="#DEAD8B"
+                android:textSize="21sp" />
+
+            <LinearLayout
+                android:id="@+id/form"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/error_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="#E23C3C"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/email_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                        android:tag="second_color"
+                        android:text="Совиная почта"
+                        android:textColor="#DEAD8B"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/email_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="32dp"
+                        android:autofillHints=""
+                        android:background="@drawable/rounded_corner_view"
+                        android:drawableStart="@drawable/email_input_icon"
+                        android:drawablePadding="12dp"
+                        android:drawableTint="#DEAD8B"
+                        android:ems="10"
+                        android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                        android:hint="Введите почту"
+                        android:inputType="textEmailAddress"
+                        android:padding="12dp"
+                        android:tag="first_color"
+                        android:textColor="#DEAD8B"
+                        android:textColorHint="#DEAD8B"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/password_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                        android:tag="second_color"
+                        android:text="Секретная фраза"
+                        android:textColor="#DEAD8B"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/password_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:background="@drawable/rounded_corner_view"
+                        android:drawableStart="@drawable/password_input_icon"
+                        android:drawablePadding="12dp"
+                        android:drawableTint="#DEAD8B"
+                        android:ems="10"
+                        android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                        android:hint="Введите пароль"
+                        android:inputType="textPassword"
+                        android:padding="12dp"
+                        android:tag="first_color"
+                        android:textColor="#DEAD8B"
+                        android:textColorHint="#DEAD8B"
+                        android:textSize="16sp"
+                        tools:ignore="DuplicateSpeakableTextCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottom_part_of_registration_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/authorization_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:background="#00371919"
+                        android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                        android:tag="first_color"
+                        android:text="Войти"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="#DEAD8B"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/registration_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/rounded_corner_view_button"
+                        android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="8dp"
+                        android:tag="second_color"
+                        android:text="Зарегистрироваться"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="#DEAD8B"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

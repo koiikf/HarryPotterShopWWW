@@ -1,0 +1,103 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Остальной контент -->
+    <!-- Например, ScrollView, RecyclerView и т.д. -->
+
+    <!-- Нижняя панель -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="#151515"
+        android:weightSum="3"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center">
+
+        <!-- Кнопка 1 -->
+        <LinearLayout
+            android:id="@+id/products_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Товары"
+                android:textColor="#DEAD8B"
+                android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                android:textSize="12sp"
+                android:paddingTop="4dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/favorite_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/favorite_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_favorites" />
+
+            <TextView
+                android:id="@+id/favorite_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                android:paddingTop="4dp"
+                android:tag="first_color"
+                android:text="Избранное"
+                android:textColor="#DEAD8B" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bin_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/bin_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_shopping_cart"
+                android:tag="first_color" />
+
+            <TextView
+                android:id="@+id/bin_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/harrypotterrussianversionofgfdtk"
+                android:paddingTop="4dp"
+                android:tag="first_color"
+                android:text="Корзина"
+                android:textColor="#DEAD8B" />
+        </LinearLayout>
+
+        <!-- Другие кнопки по аналогии -->
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
